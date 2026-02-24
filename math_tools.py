@@ -24,6 +24,14 @@ def is_palindrome(s):
 def find_min(numbers):
     min_val = numbers[0]
     for i in range(1, len(numbers)):
-        if numbers[i] > min_val:
+        if numbers[i] < min_val:
             min_val = numbers[i]
     return min_val
+def remove_duplicates(items):
+    seen = set()
+    result = []
+    for item in items:
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result

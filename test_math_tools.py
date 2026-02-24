@@ -1,4 +1,4 @@
-from math_tools import add, multiply, is_even, subtract, max_of_three, is_palindrome, find_min
+from math_tools import add, multiply, is_even, subtract, max_of_three, is_palindrome, find_min, remove_duplicates
 
 def test_add():
     assert add (2,3) == 5
@@ -39,11 +39,21 @@ def test_is_palindrome():
     assert is_palindrome("i") == True
     assert is_palindrome("") == True
     print("test_is_palindrome : ALL PASSED")
+    
 def test_find_min():
     assert find_min([1,2,3,4]) == 1
     assert find_min([2,5,6,8]) == 2
     assert find_min([9,8,7,6]) == 6
     print("test_find_min : ALL PASSED")
+    
+def test_remove_duplicates():
+    assert remove_duplicates([]) == []
+    assert remove_duplicates([1,2,3]) == [1,2,3]
+    assert remove_duplicates([5,5,5,5]) == [5]
+    assert remove_duplicates([1,2,1,3,2]) == [1,2,3]
+    assert remove_duplicates([1,"1",1,"1"]) == [1,"1"]
+    assert remove_duplicates(["a","b","a","c","b"]) == ["a","b","c"]
+    print("test_remove_duplicates : ALL PASSED")
 
 test_add()
 test_multiply()
@@ -52,5 +62,6 @@ test_subtract()
 test_max_of_three()
 test_is_palindrome()
 test_find_min()
+test_remove_duplicates()
 
 print("--- All tests passed ---")
