@@ -2,3 +2,4 @@ Name: Muhammad Ali
 Favourite Programming Language: Python
 Country: Pakistan
 Major: Computer Science
+Semester: Second
